@@ -3,7 +3,7 @@ seed: 0
 
 # data
 dataset: cub
-metadataroot: ./datasets/class_attr_data_10
+metadataroot: /mnt/nasv3/hhz/ConceptBottleneck/CUB_processed/class_attr_data_10
 use_cropped: False
 augmentation: weak
 batch_size: 128
