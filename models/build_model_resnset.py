@@ -194,7 +194,7 @@ class ProbConceptModel(ConceptConvModelBase):
             out_concept_prob = concept_prob[..., 1] if self.use_neg_concept else concept_prob
 
         out_dict = {'pred_concept_prob': out_concept_prob, 'pred_concept_uncertainty': concept_uncertainty, 'pred_concept_logit': concept_logit, 'pred_embeddings': pred_embeddings, 'concept_embeddings': concept_embeddings, 'pred_mean': pred_concept_mean, 'pred_logsigma': pred_concept_logsigma, \
-            'concept_mean':concept_mean, 'concept_logsigma': concept_logsigma, 'shift': self.shift, 'negative_scale': self.negative_scale, 'pred_embeddings_detach': pred_embeddings_detach, 'concept_pos_idx': self.concept_pos_idx}
+            'concept_mean':concept_mean, 'concept_logsigma': concept_logsigma, 'shift': self.shift, 'negative_scale': self.negative_scale, 'pred_embeddings_detach': pred_embeddings.detach(), 'concept_pos_idx': self.concept_pos_idx}
 
         if self.pred_class:
             out_concept_prob_d = out_concept_prob.detach()
